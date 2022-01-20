@@ -121,7 +121,7 @@ Expected response:
     ...]
 ...}
 ```
-More request examples are avaliable in the [examples](./scrape/examples) folder.
+More request examples are avaliable in the [examples](https://github.com/vlad-yeghiazaryan/smart-scraper/tree/master/scrape/example) folder.
 ## Deployment:
 After making your changes simply run:
 ```bash

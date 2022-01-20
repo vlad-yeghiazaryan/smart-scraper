@@ -1,8 +1,5 @@
 ## Execution order for ibm-fun-action:
 ```bash
-docker pull ibmfunctions/action-python-v3.7
-```
-```bash
 docker build . -t vladimiryeghiazaryan/smart-scraper:latest
 ```
 ```bash

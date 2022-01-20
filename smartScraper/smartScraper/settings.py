@@ -45,7 +45,7 @@ SELENIUM_BROWSER_EXECUTABLE_PATH = which('chrome')
 
 # Output settings
 FEEDS = {
-  './scrape/data.json': {
+  '../scrape/data.json': {
         'format': 'json',
         'encoding': 'utf8',
         'store_empty': False,

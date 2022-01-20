@@ -15,6 +15,6 @@ def main(request):
     return data
 
 if __name__ == '__main__':
-    with open('./scrape/request8.json', 'r') as f:
+    with open('../scrape/request.json', 'r') as f:
         request = json.loads(f.read())
         main(request)

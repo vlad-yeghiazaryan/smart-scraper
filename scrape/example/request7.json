@@ -35,6 +35,7 @@
           "type": "page",
           "follow": "href",
           "output": {
+            "js_instructions": [{"click":".dataItem span+ a"}],
             "died": ".dataItem:nth-child(8)",
             "genre": {
               "selector":".dataItem:nth-child(14) a",

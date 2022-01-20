@@ -1,6 +1,14 @@
 {
-  "urls": ["https://quotes.toscrape.com"],
+  "urls": [
+    "https://quotes.toscrape.com"
+  ],
   "extract_rules": {
+    "js_instructions": [
+      {"click": ".header-box .col-md-4 a"},
+      {"fill": ["#username","username"]},
+      {"fill": ["#password","password"]},
+      {"click": ".btn-primary"}
+    ],
     "quotes": {
       "selector": ".quote",
       "type": "list",
@@ -21,9 +29,24 @@
             "author_birth_location": ".author-born-location",
             "author_description": ".author-description"
           }
+        },
+        "goodreads": {
+          "selector": "span a+ a",
+          "type": "page",
+          "follow": "href",
+          "output": {
+            "died": ".dataItem:nth-child(8)",
+            "genre": {
+              "selector":".dataItem:nth-child(14) a",
+              "type": "list"
+            },
+            "influences": {
+              "selector":".dataItem:nth-child(17) span a",
+              "type": "list"
+            }
+          }
         }
       }
-    },
-    "next_page": ".next a"
+    }
   }
 }

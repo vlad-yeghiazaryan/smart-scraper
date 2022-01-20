@@ -1,25 +1,15 @@
 {
-  "urls": ["https://www.imdb.com/chart/top"],
+  "urls": ["https://quotes.toscrape.com"],
   "extract_rules": {
-    "js_instructions":[{"click": ".table-row:nth-child(2) a"}],
-    "movies": {
-      "selector": "tr",
+    "quotes": {
+      "selector": ".quote",
       "type": "list",
       "output": {
-        "poster": {
-          "selector": "td.posterColumn > a > img",
-          "type": "item",
-          "output": "src"
-        },
-        "title": {
-          "selector": "td.titleColumn > a",
-          "type": "item",
-          "output": "text"
-        },
-        "rating": {
-          "selector": "td.imdbRating > strong",
-          "type": "item",
-          "output": "text"
+        "text": ".text",
+        "author": ".author",
+        "tags": {
+          "selector": ".tag",
+          "type": "list"
         }
       }
     }

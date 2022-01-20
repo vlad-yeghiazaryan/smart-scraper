@@ -1,0 +1,17 @@
+{
+  "urls": ["https://quotes.toscrape.com"],
+  "extract_rules": {
+    "quotes": {
+      "selector": ".quote",
+      "type": "list",
+      "output": {
+        "text": ".text",
+        "author": ".author",
+        "tags": {
+          "selector": ".tag",
+          "type": "list"
+        }
+      }
+    }
+  }
+}

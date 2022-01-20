@@ -1,0 +1,28 @@
+{
+  "urls": ["https://quotes.toscrape.com"],
+  "extract_rules": {
+    "quotes": {
+      "selector": ".quote",
+      "type": "list",
+      "output": {
+        "text": ".text",
+        "author": ".author",
+        "tags": {
+          "selector": ".tag",
+          "type": "list"
+        },
+        "about": {
+          "selector": "span a",
+          "type": "page",
+          "follow": "href",
+          "output": {
+            "author_name": ".author-title",
+            "author_birth_date": ".author-born-date",
+            "author_birth_location": ".author-born-location",
+            "author_description": ".author-description"
+          }
+        }
+      }
+    }
+  }
+}
